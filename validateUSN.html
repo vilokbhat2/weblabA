@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>regex</title>
+
+<script>
+function usn()
+{ 
+const usnn = prompt("Enter VTU USN");
+var test = usnn.search(/^[1-4][a-z A-Z][a-z A-Z][0-9][0-9][A-Z a-z][A-Z a-z][0-9][0-9][0-9]$/);
+var zerotest = usnn.search(/^[1-4][a-z A-Z][a-z A-Z][0-9][0-9][A-Z a-z][A-Z a-z][0][0][0]$/);
+if(zerotest == 0)
+{alert("invalid usn");}
+else if(test == 0){alert("valid usn");}
+else{alert("invalid usn");}
+}
+
+
+</script>
+
+</head>
+
+<p>
+
+<div>
+
+<div>results :<button onclick="usn()">Validate VTU-USN</button></div>
+</div>
+<hr />
+<div>
+
+
+</p>
+</body>
+
+</html>

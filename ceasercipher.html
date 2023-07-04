@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>JavaScript Course - Hello World</title>
+	<!-- Script tag can also be placed here -->
+	<script src="main.js">
+	// External JavaScript Code
+	</script>
+</head>
+
+<body>
+	<p>Welcome to  JavaScript</p>
+	<script>
+	
+//A Javascript Program to illustrate Caesar Cipher Technique
+	
+	// Encrypts text using a shift od s
+	function encrypt(text, s)
+	{
+		let result=""
+		for (let i = 0; i < text.length; i++)
+		{
+			let char = text[i];
+			if (char.toLowerCase(text[i]))
+			{
+				let ch = String.fromCharCode((char.charCodeAt(0) + s-65) % 26 + 65);
+				result += ch;
+			}
+			else
+			{
+				let ch = String.fromCharCode((char.charCodeAt(0) + s-97) % 26 + 97);
+				result += ch;
+			}
+		}
+		return result;
+	}
+	
+	// Driver code
+	const text = prompt('Enter the Text: ');
+	const s =  parseFloat (prompt('Enter the number: '));
+	document.write("Text : " + text + "<br>");
+	document.write("Shift : " + s + "<br>");
+	alert("Cipher: " + encrypt(text, s) );
+	
+	// This code is contributed by avanitrachhadiya2155
+
+
+	</script>
+</body>
+
+</html>

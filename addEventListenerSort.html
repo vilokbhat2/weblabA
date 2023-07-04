@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <label>Enter the String:</label>
+        <input type="text" id="stringdata">
+        <button id="submit">Submit</button>
+        <p id="result"></p>
+
+        <script>
+
+            const input = document.getElementById('stringdata');
+            const btn = document.getElementById('submit');
+            const res = document.getElementById('submit');
+
+
+            btn.addEventListener('click', () => {
+                let values = input.value;
+                const result = values.split('').sort().join('');
+                res.innerHTML = `${result}`;
+            });
+
+
+
+        </script>
+    </body>
+</html>
